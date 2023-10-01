@@ -22,10 +22,10 @@ public class Admin extends User {
     // Set up show
     public void setupShow(BookingManager bookingManager, int showNumber, int numRows, int seatsPerRow,
             int cancellationWindowMinutes) {
-        if (numRows > 26) {
-            System.out.println("Number of rows for show cannot exceed 26!");
-        } else if (seatsPerRow > 10) {
-            System.out.println("Number of seats per row cannot exceed 10!");
+        if (numRows <= 0 | numRows > 26) {
+            System.out.println("Number of rows for show must be at least 1 and cannot exceed 26!");
+        } else if (seatsPerRow <= 0 | seatsPerRow > 10) {
+            System.out.println("Number of seats per row must be at least 1 and cannot exceed 10!");
         } else {
             Show show = new Show(showNumber, numRows, seatsPerRow, cancellationWindowMinutes);
             bookingManager.addShow(show);
