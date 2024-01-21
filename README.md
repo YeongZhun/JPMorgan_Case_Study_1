@@ -2,7 +2,7 @@
 
 Case Study 1: Show Booking App
 
-This app simulates the booking of a show, with 2 users - Admin and Buyer.
+This app simulates the booking of a show, with 2 users - Admin and Buyer. This is a very basic and preliminary setup. To allow for multiple instances and other more practical features e.g. what happens if 2 user clicks on the same seat ticket, etc, I will have to setup a database, use locking mechanisms and retrieve the ticketing information from there. A full application would probably use Spring Boot to have a web application along with UI to order tickets and possibly authentication for Admin.
 
 **Admin**:  
 Admin has 2 commands/methods:
